@@ -1,0 +1,48 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active">
+                <div class="d-flex align-items-center justify-content-center min-vh-100 corousel-div"
+                     style="background-image: url('/static/img/pic1.jpg')">
+                    <!--                <h1 class="display-1">ONE</h1>-->
+                    <!--                <img src="/src/img/pic1.jpg" style="position: absolute; z-index: 500;">-->
+                </div>
+
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex align-items-center justify-content-center min-vh-100 corousel-div"
+                     style="background-image: url('/static/img/pic2.jpg')">
+                    <!--                <img src="/src/img/pic3.jpg">-->
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex align-items-center justify-content-center min-vh-100 corousel-div"
+                     style="background-image: url('/static/img/pic3.jpg')">
+                    <!--                <img src="/src/img/pic2.jpg">-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function () {
+            var windowHeight = $(window).height() - 79;
+            $('.carousel-inner').css('height', windowHeight + 'px');
+
+            $(window).resize(function () {
+                var windowHeight = $(window).height() - 79;
+                $('.carousel-inner').css('height', windowHeight + 'px');
+            })
+            // $('.carousel-inner').css('min-height', divHeight+'px');
+        });
+    </script>
+{% endblock %}

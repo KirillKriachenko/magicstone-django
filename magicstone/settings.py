@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'countertops',
+    'slabs',
+
+    'compressor'
 ]
 
 MIDDLEWARE = [
@@ -118,4 +122,60 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder'
+]
+
 STATIC_URL = '/static/'
+LOCAL_STATIC_CDN_PATH = os.path.join(os.path.dirname(BASE_DIR),'assets')
+STATIC_ROOT = os.path.join(LOCAL_STATIC_CDN_PATH, 'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'static'),
+]
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
+
+
+# #Email settings builtin
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtpout.secureserver.net'
+EMAIL_HOST_USER = 'info@magicstone.ca'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+SERVER_EMAIL = EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = 'gthxbuu280484'
+EMAIL_PORT = 80
+EMAIL_USE_SSL = False
+EMAIL_USE_TLS = True
+
+# EMAIL_HOST = 'smtpout.secureserver.net'
+# EMAIL_HOST_USER = 'info@magicstone.ca'
+# EMAIL_HOST_PASSWORD = 'gthxbuu280484'
+# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+# SERVER_EMAIL = EMAIL_HOST_USER
+# EMAIL_PORT = 25
+# EMAIL_USE_TLS = False
+
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_HOST = 'smtp.office365.com'
+# EMAIL_HOST_USER = 'info@magicstone.ca'
+# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+# EMAIL_HOST_PASSWORD = 'gthxbuu280484'
+# EMAIL_PORT = 587
+# EMAIL_USE_SSL = False
+# EMAIL_USE_TLS = True
+
+# # EMAIL_HOST = 'outlook.office365.com'
+# EMAIL_HOST = 'relay-hosting.secureserver.net'
+# EMAIL_PORT = '25'
+# EMAIL_HOST_USER = 'alexeyka280484@gmail.com'
+# # EMAIL_HOST_USER = 'info@magicstone.ca'
+# EMAIL_HOST_PASSWORD = 'Gthxbuu280484'
+# # EMAIL_HOST_PASSWORD = 'gthxbuu280484'
+# EMAIL_USE_TLS = False
+# EMAIL_USE_SSL = False
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

@@ -1,0 +1,11 @@
+{% load static %}
+{% load compress %}
+
+{% compress css %}
+    <link type="text/x-scss" href="{% static 'css/header.scss' %}" rel="stylesheet" media="screen">
+    <link type="text/x-scss" href="{% static 'css/index.scss' %}" rel="stylesheet" media="screen">
+    <link type="text/x-scss" href="{% static 'css/countertops.scss' %}" rel="stylesheet" media="screen">
+    <link type="text/x-scss" href="{% static 'css/slabs.scss' %}" rel="stylesheet" media="screen">
+    <link type="text/x-scss" href="{% static 'css/contact.scss' %}" rel="stylesheet" media="screen">
+    <link type="text/x-scss" href="{% static 'css/footer.scss' %}" rel="stylesheet" media="screen">
+{% endcompress %}

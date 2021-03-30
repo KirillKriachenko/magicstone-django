@@ -1,0 +1,97 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        {% if message_name %}
+            <div id="thankyou-div" style="color: white; text-align: center;">
+                <h4>Thank you {{ message_name }} <br/> for your interest.</h4>
+                <h5>We will contact you shortly.</h5>
+            </div>
+            <script>
+                $(document).ready(function () {
+                    var windowHeight = $(window).height() - 216;
+                    $('#thankyou-div').css('height', windowHeight + 'px');
+                    $('#thankyou-div').css('padding-top', '50%');
+
+                    $(window).resize(function () {
+                        var windowHeight = $(window).height() - 216;
+                        $('#thankyou-div').css('height', windowHeight + 'px');
+                        $('#thankyou-div').css('padding-top', '50%');
+                    })
+                    // $('.carousel-inner').css('min-height', divHeight+'px');
+                });
+            </script>
+        {% else %}
+            <div class="slab-main-page">
+                <div class="carousel slide" data-ride="carousel">
+                    {#                <ol class="carousel-indicators">#}
+                    {#                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>#}
+                    {#                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>#}
+                    {#                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>#}
+                    {#                </ol>#}
+                    <div class="carousel-inner" role="listbox">
+                        {% if slab.slab_image %}
+                            <div class="carousel-item active">
+                                <div class="d-flex align-items-center justify-content-center min-vh-100 corousel-div"
+                                     style="background-image: url({{ slab.slab_image.url }})">
+                                    <!--                <h1 class="display-1">ONE</h1>-->
+                                    <!--                <img src="/src/img/pic1.jpg" style="position: absolute; z-index: 500;">-->
+                                </div>
+
+                            </div>
+                        {% endif %}
+                        {% if slab.slab_close_image %}
+                            <div class="carousel-item">
+                                <div class="d-flex align-items-center justify-content-center min-vh-100 corousel-div"
+                                     style="background-image: url({{ slab.slab_close_image.url }})">
+                                    <!--                <img src="/src/img/pic3.jpg">-->
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if slab_works %}
+                            {% for example in slab_works %}
+                                <div class="carousel-item">
+                                    <div class="d-flex align-items-center justify-content-center min-vh-100 corousel-div"
+                                         style="background-image: url({{ example.image.url }})">
+                                        <!--                <img src="/src/img/pic2.jpg">-->
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <div class="slab-description">
+                <h3>{{ slab.title }}</h3>
+                <p class="card-text">Thickness: {{ slab.slab_thikness }}</p>
+                <p class="card-text">Slab Sizes: <br/> {{ slab.slab_size }}</p>
+                {% if slab.slab_finish %}<p class="card-text">Finished: {{ slab.slab_finish }}</p>{% endif %}
+                <div class="contact-us">
+                    <h3>Have questions?</h3>
+                    <h5>Contact Us</h5>
+                    <br/>
+                    <form method="post">{% csrf_token %}
+                        <div class="form-group">
+                            {#                <label for="exampleInputEmail1">Name</label>#}
+                            <input type="text" name="name" class="form-control" id="nameInput" placeholder="NAME">
+                            <input style="margin-top: 20px" name="email" type="email" class="form-control"
+                                   id="emailInput"
+                                   placeholder="EMAIL">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="8" class="form-control" name="message" id="messageInput"
+                                      placeholder="MESSAGE"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-warning">Submit</button>
+                        <br/>
+                    </form>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    {% include 'base/footer.html' %}
+{% endblock %}

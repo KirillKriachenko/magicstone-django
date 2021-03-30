@@ -14,8 +14,15 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.conf.urls import url
+from countertops import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',views.show_main_page),
+    path('contact',views.open_contact_form, name='open_contact_form'),
+    # path('countertops/',include('countertops.urls')),
+    url(r'^countertops/', include(('countertops.urls', 'countertops'), namespace='countertops')),
+    url(r'^slabs/', include(('slabs.urls', 'slabs'), namespace='slabs')),
 ]

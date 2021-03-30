@@ -1,0 +1,37 @@
+body {
+  background-color: #232322;
+}
+
+.container {
+  background-color: #232322;
+
+  .slabs-list {
+    .card {
+
+      -moz-box-shadow: 0 0 10px #f4be35;
+      -webkit-box-shadow: 0 0 10px #f4be35;
+      box-shadow: 0 0 10px #f4be35;
+      margin-bottom: 20px;
+
+
+    }
+
+    a {
+      text-decoration: none;
+      color: #232322;
+    }
+
+  }
+
+  .slab-main-page{
+    .carousel-inner{
+      max-height: 450px;
+    }
+  }
+
+  .slab-description{
+    margin-top: 10px;
+    color: white;
+  }
+
+}

@@ -1,0 +1,37 @@
+.footer{
+  //position: fixed;
+  margin-top: 20px;
+  text-align: center;
+  color: #6c757d;
+
+  .contacts-ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  .footer-info{
+    display: flex;
+    flex-direction: row;
+
+    a{
+      list-style: none;
+      color: #6c757d;
+      text-decoration: underline;
+    }
+
+    .foot-left{
+      width: 45%;
+      text-align: left;
+      margin-left: 5%;
+    }
+
+    .foot-right{
+      width: 45%;
+      text-align: left;
+      margin-left: 10%;
+    }
+  }
+
+}

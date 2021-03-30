@@ -1,0 +1,291 @@
+html {
+  background-color: #232322;
+}
+
+.body {
+  background-color: #232322;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #232322;
+
+  .header-brand {
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      background-image: url("/static/img/gold.jpeg"); /* Change URL to texture file name */
+      background-repeat: repeat;
+      background-position: center center;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      font-family: 'Libre Baskerville', serif;
+      color: #f4be35;
+      font-size: 30px;
+      margin-top: 5px;
+    }
+  }
+
+  .header-menu {
+    ul {
+      list-style: none;
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding: 0px 10px 10px 10px;
+
+        .btn {
+          margin: 0;
+          padding: 0;
+          border-radius: 0;
+          font-size: 15px;
+          margin-top: -4px;
+
+          &:focus, &:hover {
+            outline: 0;
+            color: white;
+            box-shadow: none;
+            //box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+          }
+        }
+
+        .dropdown-menu {
+          background-color: #232322;
+        }
+
+
+        .dropdown-menu-right {
+          min-width: 55px;
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+
+          &:hover {
+            border-bottom: 1px solid #f4be35;
+          }
+        }
+
+      }
+
+      .larg-width {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (min-width: 648px) {
+    flex-direction: row;
+    width: 90%;
+    margin-left: 5%;
+
+    .header-menu {
+      //margin-left: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  @media only screen and (min-width: 700px) {
+    //flex-direction: row;
+    //width: 90%;
+    //margin-left: 5%;
+
+    .header-menu {
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+  }
+
+  @media only screen and (min-width: 768px) {
+    .header-menu {
+      margin-top: 30px;
+
+      .small-width {
+        display: none;
+      }
+
+      ul {
+        //li{
+        //  padding: 0;
+        //}
+        .larg-width {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 946px) {
+    height: 80px;
+    padding-top: 20px;
+    .header-menu {
+      margin-top: 10px;
+    }
+  }
+
+  @media only screen and (min-width: 1000px) {
+    .header-brand {
+      a {
+        font-size: 35px;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1087px) {
+    padding-top: 10px;
+    .header-brand {
+      a {
+        font-size: 45px;
+      }
+    }
+
+    .header-menu {
+      margin-top: 20px;
+    }
+  }
+}
+
+//.header {
+//  background-color: #232322;
+//  text-align: center;
+//  width: 100%;
+//  height: 80px;
+//
+//  .header-brand {
+//    margin-top: 5px;
+//
+//    a {
+//      text-decoration: none;
+//      background-image: url("../src/img/gold.jpeg"); /* Change URL to texture file name */
+//      background-repeat: repeat;
+//      background-position: center center;
+//      -webkit-background-clip: text;
+//      -webkit-text-fill-color: transparent;
+//
+//      font-family: 'Libre Baskerville', serif;
+//      color: #f4be35;
+//      font-size: 30px;
+//      margin-top: 5px;
+//    }
+//
+//  }
+//
+//  .header-menu {
+//    width: 100%;
+//    display: flex;
+//    justify-content: center;
+//  }
+//
+//  ul {
+//    list-style: none;
+//    list-style-type: none;
+//    display: inline;
+//    display: flex;
+//    margin: 0;
+//    padding: 0;
+//    color: white;
+//    font-size: 15px;
+//
+//    #about-us {
+//      display: none;
+//    }
+//
+//    .larg-width {
+//      display: none;
+//      margin-top: -7px;
+//    }
+//
+//    li {
+//      padding: 0px 10px 10px 10px;
+//
+//
+//      .btn {
+//        margin: 0;
+//        padding: 0;
+//        border-radius: 0;
+//        font-size: 15px;
+//        margin-top: -4px;
+//
+//        &:focus, &:hover {
+//          outline: 0;
+//          color: white;
+//          box-shadow: none;
+//          //box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+//        }
+//      }
+//
+//      .dropdown-menu {
+//        background-color: #232322;
+//      }
+//
+//
+//      .dropdown-menu-right {
+//        min-width: 55px;
+//      }
+//
+//
+//      .active {
+//        border-bottom: 1px solid #f4be35;
+//        background-color: #f4be35;
+//        color: #232322;
+//      }
+//
+//      a {
+//        text-decoration: none;
+//        color: white;
+//
+//        &:hover {
+//          border-bottom: 1px solid #f4be35;
+//        }
+//      }
+//
+//
+//    }
+//
+//    @media only screen and (min-width: 670px) {
+//      li {
+//        padding: 0px 20px 10px 20px;
+//      }
+//    }
+//
+//    @media only screen and (min-width: 530px) {
+//      .small-width {
+//        display: none;
+//      }
+//
+//      #about-us {
+//        display: block;
+//      }
+//
+//      .larg-width {
+//        display: flex;
+//      }
+//    }
+//  }
+//
+//  @media only screen and (min-width: 850px) {
+//    display: flex;
+//    .header-brand {
+//      width: 35%;
+//      margin-top: 20px;
+//    }
+//    .header-menu {
+//      width: 65%;
+//      margin-top: 30px;
+//
+//      ul {
+//        li {
+//          padding: 0px 15px 10px 10px;
+//        }
+//      }
+//    }
+//  }
+//}

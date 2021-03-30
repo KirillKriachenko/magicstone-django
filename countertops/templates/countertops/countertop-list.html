@@ -1,0 +1,58 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container">
+        <div class="countertop-list">
+            {% if countertops %}
+                {% for countertop in countertops %}
+                    {% if countertop.image %}
+                        <a href="{{ countertop.image.url }}">
+                            <div class="cards">
+                                <img class="card-img-top" src="{{ countertop.image.url }}" alt="Card image cap">
+                            </div>
+                            {#                            <div class="cards" style="background-image: url({{ countertop.image.url }})">#}
+                            {##}
+                            {#                            </div>#}
+                        </a>
+                        {#                        <div class="cards">#}
+                        {#                            <a href="{{ countertop.image.url }}">#}
+                        {#                                <img src="{{ countertop.image.url }}" alt="Card image cap">#}
+                        {#                            </a>#}
+                        {#                        </div>#}
+
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </div>
+    </div>
+
+    {% include 'base/footer.html' %}
+
+
+
+
+    {#        <div class="container">#}
+    {#        <div class="countertop-list">#}
+    {#            {% if countertops %}#}
+    {#                <section class="photo_gallery">#}
+    {#                    {% for countertop in countertops %}#}
+    {#                        {% if countertop.image %}#}
+    {#                            <a href="{{ countertop.image.url }}">#}
+    {#                                <div class="cards">#}
+    {#                                    <img class="card-img-top" src="{{ countertop.image.url }}" alt="Card image cap">#}
+    {#                                </div>#}
+    {#                            </a>#}
+    {#                        {% endif %}#}
+    {#                    {% endfor %}#}
+    {#                </section>#}
+    {##}
+    {#            {% endif %}#}
+    {#        </div>#}
+    {#    </div>#}
+    {#    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.7.0/simple-lightbox.min.js" integrity="sha512-ZajFBgnksNp8Rj+AbmYe8ueOu45HiSjtf3QpqnRbHlq719m6VK0FkbYIqQ8wEnlVuJ1i9pC+z6Z9ewmDnUTMCg==" crossorigin="anonymous"></script>#}
+    {##}
+    {#    <script>#}
+    {#        var gallery = new SimpleLightbox('.photo_gallery a');#}
+    {#    </script>#}
+{% endblock %}
