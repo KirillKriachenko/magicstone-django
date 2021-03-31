@@ -12,14 +12,39 @@ body {
       -webkit-box-shadow: 0 0 10px #f4be35;
       box-shadow: 0 0 10px #f4be35;
       margin-bottom: 20px;
-
-
     }
 
     a {
       text-decoration: none;
       color: #232322;
     }
+
+  }
+
+
+  @media screen and (min-width: 648px) {
+    .slabs-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+
+      .card {
+        width: 40%;
+        height: auto;
+
+        .card-img-top{
+          height: auto !important;
+        }
+
+        .card-img-top {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
 
   }
 

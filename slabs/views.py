@@ -10,14 +10,14 @@ def get_all_slabs_material(request,material):
     slabs_list = Slab.objects.filter(slab_material=material).order_by('-created_date')
     print(slabs_list)
     view_template = 'slabs/slab-list.html'
-    context = {'slabs':slabs_list}
+    context = {'slabs':slabs_list,'filter':'quartz','link':'slabs'}
 
     return render(request,view_template,context)
 
 def get_material_category_slab(request,material,category):
     slab_list = Slab.objects.filter(slab_material=material,slab_category=category).order_by('-created_date')
     view_template = 'slabs/slab-list.html'
-    context = {'slabs':slab_list}
+    context = {'slabs':slab_list,'filter':category,'link':'slabs'}
 
     return render(request,view_template,context)
 
@@ -39,24 +39,11 @@ def get_countertop_by_id(request,material,category,id):
                 return HttpResponse('Invalid header found.')
             return render(request,view_template,{'message_name':message_name})
 
-        # message_name = request.POST['name']
-        # message_email = request.POST['email']
-        # message = request.POST['message']
-        #
-        # print(message_name)
-        #
-        # send_mail(
-        #     'Message from site', #subject
-        #     message, #message
-        #     message_email, # from Email
-        #     ['info@magicstone.ca'], #To Email
-        # )
-
     slab_ids = Slab.objects.get(id=id)
     slab_works = SlabWorkExample.objects.filter(item_ids=id)
 
     # print(material)
     # print(id)
-    context = {'slab':slab_ids, 'slab_works':slab_works}
+    context = {'slab':slab_ids, 'slab_works':slab_works,'link':'slabs'}
 
     return render(request,view_template,context)

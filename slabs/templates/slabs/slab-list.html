@@ -5,23 +5,25 @@
     <div class="container">
         <div class="slabs-list">
             {% if slabs %}
-                    {% for slab in slabs %}
-                        {% if slab.slab_image %}
+                {% for slab in slabs %}
+                    {% if slab.slab_image %}
+
+                        <div class="card" style="margin-top: 20px;">
                             <a href="{% url 'slabs:get_countertop_by_id' slab.slab_material slab.slab_category slab.id %}">
-                                <div class="card" style="display: flex; max-width: 30rem; margin-top: 20px;">
-                                    <img class="card-img-top"
-                                         src="{{ slab.slab_image.url }}"
-                                         alt="Card image cap">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{ slab.title }} - {{ slab.slab_category }}</h5>
-                                        <p class="card-text">Thickness: {{ slab.slab_thikness}}</p>
-                                        <p class="card-text">Slab Sizes: <br/> {{ slab.slab_size }}</p>
-                                        {% if slab.slab_finish %}<p class="card-text">Finished: {{ slab.slab_finish }}</p>{% endif %}
-                                    </div>
+                                <img class="card-img-top"
+                                     src="{{ slab.slab_image.url }}"
+                                     alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ slab.title }} - {{ slab.slab_category }}</h5>
+                                    <p class="card-text">Thickness: {{ slab.slab_thikness }}</p>
+                                    <p class="card-text">Slab Sizes: <br/> {{ slab.slab_size }}</p>
+                                    {% if slab.slab_finish %}
+                                        <p class="card-text">Finished: {{ slab.slab_finish }}</p>{% endif %}
                                 </div>
                             </a>
-                        {% endif %}
-                    {% endfor %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
             {% endif %}
         </div>
     </div>

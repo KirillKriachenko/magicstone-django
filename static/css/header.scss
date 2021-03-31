@@ -74,6 +74,16 @@ html {
           }
         }
 
+        .active {
+          background-color: #ffc107;
+          color: #232322;
+          font-size: 20px;
+        }
+
+        .active-link {
+          border-bottom: 1px solid #f4be35;
+        }
+
       }
 
       .larg-width {

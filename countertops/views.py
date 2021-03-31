@@ -17,7 +17,7 @@ def open_contact_form(request):
 def get_all_countertops(request):
     countertops_list = Countertop.objects.all().order_by('-created')
     view_template = 'countertops/countertop-list.html'
-    countext = {'countertops':countertops_list}
+    countext = {'countertops':countertops_list,'filter':'all','link':'countertops'}
 
     return render(request, view_template, countext)
 
@@ -26,6 +26,6 @@ def get_filtered_countertops(request,filter):
     countertops_list = Countertop.objects.filter(category=filter)
 
     view_template = 'countertops/countertop-list.html'
-    countext = {'countertops': countertops_list}
+    countext = {'countertops': countertops_list,'filter':filter,'link':'countertops'}
 
     return render(request,view_template,countext)
