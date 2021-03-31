@@ -1,0 +1,130 @@
+html {
+  background-color: #232322;
+}
+
+.body {
+  background-color: #232322;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  background-color: #232322;
+}
+.header .header-brand {
+  text-align: center;
+}
+.header .header-brand a {
+  text-decoration: none;
+  background-image: url("/static/img/gold.jpeg");
+  /* Change URL to texture file name */
+  background-repeat: repeat;
+  background-position: center center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Libre Baskerville", serif;
+  color: #f4be35;
+  font-size: 30px;
+  margin-top: 5px;
+}
+.header .header-menu ul {
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+.header .header-menu ul li {
+  padding: 0px 10px 10px 10px;
+}
+.header .header-menu ul li .btn {
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  font-size: 15px;
+  margin-top: -4px;
+}
+.header .header-menu ul li .btn:focus, .header .header-menu ul li .btn:hover {
+  outline: 0;
+  color: white;
+  box-shadow: none;
+}
+.header .header-menu ul li .dropdown-menu {
+  background-color: #232322;
+}
+.header .header-menu ul li .dropdown-menu-right {
+  min-width: 55px;
+}
+.header .header-menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+.header .header-menu ul li a:hover {
+  border-bottom: 1px solid #f4be35;
+}
+.header .header-menu ul li .active {
+  background-color: #ffc107;
+  color: #232322;
+  font-size: 20px;
+}
+.header .header-menu ul li .active-link {
+  border-bottom: 1px solid #f4be35;
+}
+.header .header-menu ul .larg-width {
+  display: none;
+}
+@media screen and (min-width: 648px) {
+  .header {
+    flex-direction: row;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .header .header-menu {
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 700px) {
+  .header .header-menu {
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header .header-menu {
+    margin-top: 30px;
+  }
+  .header .header-menu .small-width {
+    display: none;
+  }
+  .header .header-menu ul .larg-width {
+    display: inline-block;
+  }
+}
+@media only screen and (min-width: 946px) {
+  .header {
+    height: 80px;
+    padding-top: 20px;
+  }
+  .header .header-menu {
+    margin-top: 10px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  .header .header-brand a {
+    font-size: 35px;
+  }
+}
+@media only screen and (min-width: 1087px) {
+  .header {
+    padding-top: 10px;
+  }
+  .header .header-brand a {
+    font-size: 45px;
+  }
+  .header .header-menu {
+    margin-top: 20px;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

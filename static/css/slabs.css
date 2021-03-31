@@ -1,0 +1,45 @@
+body {
+  background-color: #232322;
+}
+
+.container {
+  background-color: #232322;
+}
+.container .slabs-list .card {
+  -moz-box-shadow: 0 0 10px #f4be35;
+  -webkit-box-shadow: 0 0 10px #f4be35;
+  box-shadow: 0 0 10px #f4be35;
+  margin-bottom: 20px;
+}
+.container .slabs-list a {
+  text-decoration: none;
+  color: #232322;
+}
+@media screen and (min-width: 648px) {
+  .container .slabs-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .container .slabs-list .card {
+    width: 40%;
+    height: auto;
+  }
+  .container .slabs-list .card .card-img-top {
+    height: auto !important;
+  }
+  .container .slabs-list .card .card-img-top {
+    width: 100%;
+    height: 100%;
+  }
+}
+.container .slab-main-page .carousel-inner {
+  max-height: 450px;
+}
+.container .slab-description {
+  margin-top: 10px;
+  color: white;
+}
+
+/*# sourceMappingURL=slabs.css.map */
