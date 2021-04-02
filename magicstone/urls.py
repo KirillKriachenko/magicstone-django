@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.show_main_page),
     path('contact',views.open_contact_form, name='open_contact_form'),
+    path('about',views.get_about_page, name='get_about_page'),
     # path('countertops/',include('countertops.urls')),
     url(r'^countertops/', include(('countertops.urls', 'countertops'), namespace='countertops')),
     url(r'^slabs/', include(('slabs.urls', 'slabs'), namespace='slabs')),

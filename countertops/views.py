@@ -29,3 +29,7 @@ def get_filtered_countertops(request,filter):
     countext = {'countertops': countertops_list,'filter':filter,'link':'countertops'}
 
     return render(request,view_template,countext)
+
+def get_about_page(request):
+    view_template = 'countertops/about.html'
+    return render(request,view_template)
