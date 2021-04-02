@@ -35,12 +35,31 @@
 
     <script>
         $(document).ready(function () {
-            var windowHeight = $(window).height() - 79;
+            var header = $('#header-main').height()
+            var windowHeight = $(window).height() - header;
+            windowHeight = windowHeight + 49
             $('.carousel-inner').css('height', windowHeight + 'px');
+            $('.corousel-div').css('background-size', $(window).width() + 'px ' + windowHeight + 'px')
+            $('.corousel-div').css('background-repeat', 'no-repeat')
+            $('.corousel-div').css('min-height', 'no-repeat')
+            if ($(window).height() > $(window).width()) {
+                $('.corousel-div').css('background-size', windowHeight + 354 + 'px ' + windowHeight + 'px')
+                $('.corousel-div').css('background-position-x', 'center')
+            }
+
 
             $(window).resize(function () {
-                var windowHeight = $(window).height() - 79;
+                var header = $('#header-main').height()
+                var windowHeight = $(window).height() - header;
+                windowHeight = windowHeight + 49
                 $('.carousel-inner').css('height', windowHeight + 'px');
+                $('.corousel-div').css('background-size', $(window).width() + 'px ' + windowHeight + 'px')
+                $('.corousel-div').css('background-repeat', 'no-repeat')
+                $('.corousel-div').css('min-height', 'no-repeat')
+                if ($(window).height() > $(window).width()) {
+                    $('.corousel-div').css('background-size', windowHeight + 354 + 'px ' + windowHeight + 'px')
+                    $('.corousel-div').css('background-position-x', 'center')
+                }
             })
             // $('.carousel-inner').css('min-height', divHeight+'px');
         });
