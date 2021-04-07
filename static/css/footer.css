@@ -1,7 +1,8 @@
 .footer {
   margin-top: 20px;
   text-align: center;
-  color: #6c757d;
+  color: white;
+  font-size: 12px;
 }
 .footer .contacts-ul {
   list-style: none;
@@ -15,7 +16,7 @@
 }
 .footer .footer-info a {
   list-style: none;
-  color: #6c757d;
+  color: white;
   text-decoration: underline;
 }
 .footer .footer-info .foot-left {
@@ -27,6 +28,15 @@
   width: 45%;
   text-align: left;
   margin-left: 10%;
+}
+.footer .footer-address {
+  text-align: left;
+  margin-top: -15px;
+  margin-left: 18px;
+}
+.footer .footer-address a {
+  text-decoration: none;
+  color: white;
 }
 
 /*# sourceMappingURL=footer.css.map */

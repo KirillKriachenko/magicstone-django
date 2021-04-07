@@ -36,7 +36,7 @@ html {
   padding: 0;
 }
 .header .header-menu ul li {
-  padding: 0px 10px 10px 10px;
+  padding: 0px 5px 5px 10px;
 }
 .header .header-menu ul li .btn {
   margin: 0;
@@ -73,6 +73,14 @@ html {
 }
 .header .header-menu ul .larg-width {
   display: none;
+}
+@media only screen and (min-width: 640px) and (min-height: 300px) {
+  .header {
+    flex-direction: row;
+  }
+  .header .header-menu {
+    margin-top: 10px;
+  }
 }
 @media screen and (min-width: 648px) {
   .header {
