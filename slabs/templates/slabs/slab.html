@@ -63,13 +63,13 @@
                 </div>
             </div>
             <div class="slab-description">
-                <h3>{{ slab.title }}</h3>
+                <h3 class="text-left" style="color: #f4be35; margin-top: 10px;">{{ slab.title }}</h3>
                 <p class="card-text">Thickness: {{ slab.slab_thikness }}</p>
                 <p class="card-text">Slab Sizes: <br/> {{ slab.slab_size }}</p>
                 {% if slab.slab_finish %}<p class="card-text">Finished: {{ slab.slab_finish }}</p>{% endif %}
                 <div class="contact-us">
-                    <h3>Have questions?</h3>
-                    <h5>Contact Us</h5>
+                    <h3 class="text-left">Have questions?</h3>
+                    <h5 class="text-left">Contact Us</h5>
                     <br/>
                     <form method="post">{% csrf_token %}
                         <div class="form-group">

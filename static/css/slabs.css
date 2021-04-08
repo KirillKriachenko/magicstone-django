@@ -5,11 +5,19 @@ body {
 .container {
   background-color: #232322;
 }
+.container .slabs-list {
+  width: 90%;
+  margin-left: 5%;
+}
 .container .slabs-list .card {
   -moz-box-shadow: 0 0 10px #f4be35;
   -webkit-box-shadow: 0 0 10px #f4be35;
   box-shadow: 0 0 10px #f4be35;
   margin-bottom: 20px;
+}
+.container .slabs-list .card .card-body .card-text {
+  color: #232322;
+  margin: 0;
 }
 .container .slabs-list a {
   text-decoration: none;
@@ -40,6 +48,9 @@ body {
 .container .slab-description {
   margin-top: 10px;
   color: white;
+}
+.container .slab-description .text-left {
+  margin-left: 5%;
 }
 
 /*# sourceMappingURL=slabs.css.map */

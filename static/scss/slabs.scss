@@ -6,12 +6,21 @@ body {
   background-color: #232322;
 
   .slabs-list {
+    width: 90%;
+    margin-left: 5%;
     .card {
 
       -moz-box-shadow: 0 0 10px #f4be35;
       -webkit-box-shadow: 0 0 10px #f4be35;
       box-shadow: 0 0 10px #f4be35;
       margin-bottom: 20px;
+
+      .card-body{
+        .card-text{
+          color: #232322;
+          margin: 0;
+        }
+      }
     }
 
     a {
@@ -55,6 +64,11 @@ body {
   }
 
   .slab-description{
+
+    .text-left{
+      margin-left: 5%;
+    }
+
     margin-top: 10px;
     color: white;
   }

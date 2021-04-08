@@ -4,5 +4,9 @@ body {
 body .container {
   background-color: #232322;
 }
+body .container form {
+  width: 90%;
+  margin-left: 5%;
+}
 
 /*# sourceMappingURL=contact.css.map */
