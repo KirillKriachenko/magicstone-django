@@ -2,68 +2,115 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
-        <h1 class="about-title">Modern quartz solutions for your home</h1>
-        <img style="margin-top: 10px;" src="/static/img/countertop-example.jpg" alt="countertop example"/>
-        <p style="margin-top: 10px">
-            <strong><u>Magicstone</u></strong> offers customization services for quartz products in GTA and all Ontario
-            province. From kitchen countertops to fireplaces, from bars to bathroom decoration, we offer a variety of
-            solutions for your home. We also do:
-        </p>
-        <ul>
-            <li>Backsplashes</li>
-            <li>Tub surrounds</li>
-            <li>Vanities</li>
-            <li>Custom projects</li>
-            <li>Slab sales</li>
-            <li>Sell sink faucets</li>
-        </ul>
-        <h1 class="about-title">Why Quartz?</h1>
-        <img style="margin-top: 10px;" src="/static/img/TypesofCountertops-min.jpg" alt="countertops type"/>
-        <p style="margin-top: 20px;">
-            <strong><u>Quartz countertops</u></strong> have become an elegant decision for those who love the look of
-            granite but are concerned about the maintenance. Quartz is stronger than granite, requires no resealing & is
-            highly resistant to scratches and stains. Visit our showroom to view samples of all the major brands of
-            quartz colors we have. After choosing the right slab for you, we will go with you through all process from
-            idea & design to installation on your site. Our <strong>rule #1</strong> is <u>satisfaction of our
-            customers</u>
-        </p>
-        <h1 class="about-title">Why Magicstone?</h1>
-        {#        <h3 class="about-subtitle">We are:</h3>#}
-        <ul style="margin-left: 10%;list-style-type: decimal;">
-            <li>Locally Owned & Operated</li>
-            <li>Have fast turnaround team</li>
-            <li>In our showroom, you can find an extensive range of quartz options in variable textures, patterns and
-                colours
-            </li>
-            <li>The quartz we supply has the perfect combination of visual appeal and desirable properties</li>
-            <li>We provide excellent customer service and make sure that our clients have a satisfying experience.</li>
-            <li>No Sub-contractors Involved</li>
-        </ul>
-        <h1 class="about-title">Our Service Process:</h1>
-
-{#        <p>#}
-{#            After you schedule a consultation, one of our quartz specialists will meet you in your place or in our#}
-{#            showroom.#}
-{#            You will be welcomed to share all your ideas and Then they take#}
-{#            measurements and give you free estimate.#}
-{#            Once you’ve chosen the style you want, we fabricate the quartz slab according to your preferences. Finally,#}
-{#            we arrange a convenient time and date for you to deliver and install your stone.#}
-{#        </p>#}
-
-        <div class="square">
-            <div>
-                <img style="margin-top: 10px; height: 100px; width: 70px" src="/static/img/installer-icon.png" alt="countertop installer"/>
-            </div>
-
-            <p>
-                 After you schedule a consultation, one of our quartz specialists will meet you in your place or in our
-            showroom.
-            You will be welcomed to share all your ideas and Then they take
-            measurements and give you free estimate.
-            Once you’ve chosen the style you want, we fabricate the quartz slab according to your preferences. Finally,
-            we arrange a convenient time and date for you to deliver and install your stone.
+    <div class="container-about">
+        <div class="center-div">
+            <h1 class="about-title">Modern quartz solutions for your home</h1>
+            <img class="about-small-width" style="margin-top: 10px;" src="/static/img/countertop-example.jpg"
+                 alt="countertop example"/>
+            <p class="about-text about-small-width" style="margin-top: 10px">
+                <strong><u>Magicstone</u></strong> offers customization services for quartz products in GTA and all
+                Ontario
+                province. From kitchen countertops to fireplaces, from bars to bathroom decoration, we offer a variety
+                of
+                solutions for your home. We also do:
             </p>
+
+            <div class="about-square-left">
+                <img style="margin-top: 10px;" src="/static/img/countertop-example.jpg" alt="countertop example"/>
+                <p class="about-text" style="margin-top: 10px; padding: 10px; margin-left: 10px">
+                    <strong><u>Magicstone</u></strong> offers customization services for quartz products in GTA and all
+                    Ontario
+                    province. From kitchen countertops to fireplaces, from bars to bathroom decoration, we offer a
+                    variety
+                    of
+                    solutions for your home.
+                </p>
+            </div>
+            <h1 id="we-also-do">We also do:</h1>
+            <ul class="list">
+                <li>Backsplashes</li>
+                <li>Tub surrounds</li>
+                <li>Vanities</li>
+                <li>Custom projects</li>
+                <li>Slab sales</li>
+                <li>Sell sink faucets</li>
+            </ul>
+            <h1 class="about-title">Why Quartz?</h1>
+            <img class="about-small-width" style="margin-top: 10px;" src="/static/img/TypesofCountertops-min.jpg"
+                 alt="countertops type"/>
+            <p class="about-small-width" style="margin-top: 20px;">
+                <strong><u>Quartz countertops</u></strong> have become an elegant decision for those who love the look
+                of
+                granite but are concerned about the maintenance. Quartz is stronger than granite, requires no resealing
+                & is
+                highly resistant to scratches and stains. Visit our showroom to view samples of all the major brands of
+                quartz colors we have. After choosing the right slab for you, we will go with you through all process
+                from
+                idea & design to installation on your site. Our <strong>rule #1</strong> is <u>satisfaction of our
+                customers</u>
+            </p>
+            <div class="about-square-right">
+
+                <p style="margin-top: 20px; margin-left: 0; max-width: 435px;">
+                    <strong><u>Quartz countertops</u></strong> have become an elegant decision for those who love the
+                    look
+                    of
+                    granite but are concerned about the maintenance. Quartz is stronger than granite, requires no
+                    resealing
+                    & is
+                    highly resistant to scratches and stains. Visit our showroom to view samples of all the major brands
+                    of
+                    quartz colors we have. After choosing the right slab for you, we will go with you through all
+                    process
+                    from
+                    idea & design to installation on your site. Our <strong>rule #1</strong> is <u>satisfaction of our
+                    customers</u>
+                </p>
+                <img style="margin-top: 10px;" src="/static/img/TypesofCountertops-min.jpg" alt="countertops type"/>
+
+            </div>
+            <h1 class="about-title">Why Magicstone?</h1>
+            {#        <h3 class="about-subtitle">We are:</h3>#}
+            <ul class="list" style="list-style-type: decimal;">
+                <li>Locally Owned & Operated</li>
+                <li>Have fast turnaround team</li>
+                <li>In our showroom, you can find an extensive range of quartz options in variable textures, patterns
+                    and
+                    colours
+                </li>
+                <li>The quartz we supply has the perfect combination of visual appeal and desirable properties</li>
+                <li>We provide excellent customer service and make sure that our clients have a satisfying experience.
+                </li>
+                <li>No Sub-contractors Involved</li>
+            </ul>
+            <h1 class="about-title">Our Service Process:</h1>
+
+            {#        <p>#}
+            {#            After you schedule a consultation, one of our quartz specialists will meet you in your place or in our#}
+            {#            showroom.#}
+            {#            You will be welcomed to share all your ideas and Then they take#}
+            {#            measurements and give you free estimate.#}
+            {#            Once you’ve chosen the style you want, we fabricate the quartz slab according to your preferences. Finally,#}
+            {#            we arrange a convenient time and date for you to deliver and install your stone.#}
+            {#        </p>#}
+
+            <div class="square">
+                <div>
+                    <img style="margin-top: 10px; height: 100px; width: 70px" src="/static/img/installer-icon.png"
+                         alt="countertop installer"/>
+                </div>
+
+                <p>
+                    After you schedule a consultation, one of our quartz specialists will meet you in your place or in
+                    our
+                    showroom.
+                    You will be welcomed to share all your ideas and Then they take
+                    measurements and give you free estimate.
+                    Once you’ve chosen the style you want, we fabricate the quartz slab according to your preferences.
+                    Finally,
+                    we arrange a convenient time and date for you to deliver and install your stone.
+                </p>
+            </div>
         </div>
     </div>
     {% include 'base/footer.html' %}

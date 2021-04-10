@@ -10,6 +10,7 @@ body {
   margin-left: 5%;
 }
 .container .slabs-list .card {
+  max-width: 400px;
   -moz-box-shadow: 0 0 10px #f4be35;
   -webkit-box-shadow: 0 0 10px #f4be35;
   box-shadow: 0 0 10px #f4be35;

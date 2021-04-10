@@ -1,9 +1,11 @@
-.container {
+.container-about {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
   overflow: hidden;
+  //max-width: 1000px;
+
 
   .about-title {
     color: #f4be35;
@@ -51,6 +53,10 @@
     //}
   }
 
+  .list {
+    margin-left: 10%;
+  }
+
   .about-subtitle {
     color: white;
     font-weight: lighter;
@@ -68,6 +74,80 @@
 
     p {
       text-align: justify;
+    }
+  }
+
+  .about-square-left {
+    display: none;
+  }
+   .about-square-right {
+    display: none;
+  }
+
+  #we-also-do {
+    display: none;
+  }
+
+  @media screen and (min-width: 750px) {
+    .about-small-width {
+      display: none;
+    }
+    #we-also-do {
+      display: block;
+      color: #f4be35;
+      font-size: 29px;
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 10px;
+    }
+
+
+    .about-title {
+      text-align: center;
+    }
+
+    .list {
+      margin-left: 5%;
+    }
+
+    .about-square-left {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      margin-left: 5%;
+
+      img {
+        width: 50%;
+        max-width: 600px;
+      }
+
+    }
+
+    .about-square-right {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 90%;
+      margin-left: 5%;
+
+      img {
+        width: 50%;
+        max-width: 600px;
+      }
+
+    }
+
+  }
+
+  @media screen and (min-width: 1000px) {
+    justify-content: center;
+    align-items: center;
+
+    .center-div{
+      max-width: 1000px;
     }
   }
 

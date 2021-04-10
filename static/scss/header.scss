@@ -58,6 +58,13 @@ html {
 
         .dropdown-menu {
           background-color: #232322;
+
+          .dropdown-item {
+            &:hover {
+              background-color: #ffc107;
+              color: #232322;
+            }
+          }
         }
 
 

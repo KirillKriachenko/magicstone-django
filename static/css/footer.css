@@ -13,21 +13,16 @@
 .footer .footer-info {
   display: flex;
   flex-direction: row;
+  align-items: start;
+  justify-content: space-evenly;
+  text-align: left;
+  width: 90%;
+  margin-left: 5%;
 }
 .footer .footer-info a {
   list-style: none;
   color: white;
   text-decoration: underline;
-}
-.footer .footer-info .foot-left {
-  width: 45%;
-  text-align: left;
-  margin-left: 5%;
-}
-.footer .footer-info .foot-right {
-  width: 45%;
-  text-align: left;
-  margin-left: 10%;
 }
 .footer .footer-address {
   text-align: left;

@@ -53,6 +53,10 @@ html {
 .header .header-menu ul li .dropdown-menu {
   background-color: #232322;
 }
+.header .header-menu ul li .dropdown-menu .dropdown-item:hover {
+  background-color: #ffc107;
+  color: #232322;
+}
 .header .header-menu ul li .dropdown-menu-right {
   min-width: 55px;
 }
