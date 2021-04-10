@@ -1,0 +1,115 @@
+.container-about {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.container-about .about-title {
+  color: #f4be35;
+  font-size: 29px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 10px;
+}
+.container-about .sub-title {
+  color: white;
+  text-align: left;
+  margin-left: 5%;
+  font-size: 20px;
+}
+.container-about p {
+  color: white;
+  margin-left: 5%;
+  width: 90%;
+}
+.container-about ul {
+  color: white;
+  width: 90%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 15%;
+  list-style-type: square;
+}
+.container-about .list {
+  margin-left: 10%;
+}
+.container-about .about-subtitle {
+  color: white;
+  font-weight: lighter;
+  font-size: 1.4em;
+  margin-left: 5%;
+  margin-top: 5px;
+}
+.container-about .square img {
+  float: left;
+  margin: 5px;
+  margin-left: 5%;
+}
+.container-about .square p {
+  text-align: justify;
+}
+.container-about .about-square-left {
+  display: none;
+}
+.container-about .about-square-right {
+  display: none;
+}
+.container-about #we-also-do {
+  display: none;
+}
+@media screen and (min-width: 750px) {
+  .container-about .about-small-width {
+    display: none;
+  }
+  .container-about #we-also-do {
+    display: block;
+    color: #f4be35;
+    font-size: 29px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 10px;
+  }
+  .container-about .about-title {
+    text-align: center;
+  }
+  .container-about .list {
+    margin-left: 5%;
+  }
+  .container-about .about-square-left {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .container-about .about-square-left img {
+    width: 50%;
+    max-width: 600px;
+  }
+  .container-about .about-square-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+  }
+  .container-about .about-square-right img {
+    width: 50%;
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .container-about {
+    justify-content: center;
+    align-items: center;
+  }
+  .container-about .center-div {
+    max-width: 1000px;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */
