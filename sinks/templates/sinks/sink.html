@@ -3,6 +3,18 @@
 
 {% block content %}
     <div class="sink-container">
-        Sink would be here
+        <h1 class="sink-title"></h1>
+        <div class="sink">
+            {% if sink.sink_image %}
+                <img src="{{ sink.sink_image.url }}">
+            {% endif %}
+            <h3 class="sink-category">{{ sink.get_sink_category_display }}</h3>
+            <p class="sink-description">{{ sink.sink_text | safe | truncatewords:25 }}</p>
+
+        </div>
+
     </div>
+
+    {% include 'base/footer.html' %}
 {% endblock %}
+

@@ -1,3 +1,37 @@
 .sink-container{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  a{
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .sink-title{
+    color: #f4be35;
+    font-size: 29px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .sink{
+    color: white;
+    .sink-category{
+      font-size: 20px;
+      text-align: center;
+    }
+
+   p{
+     width: 100%;
+     padding: 0px 20px 0px 20px;
+   }
+
+    img{
+      width: 100%;
+    }
+  }
 
 }
