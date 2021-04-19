@@ -26,4 +26,5 @@ urlpatterns = [
     # path('countertops/',include('countertops.urls')),
     url(r'^countertops/', include(('countertops.urls', 'countertops'), namespace='countertops')),
     url(r'^slabs/', include(('slabs.urls', 'slabs'), namespace='slabs')),
+    url(r'^sinks/', include(('sinks.urls', 'sinks'), namespace='sinks')),
 ]

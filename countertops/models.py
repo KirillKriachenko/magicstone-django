@@ -19,3 +19,11 @@ class Countertop(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Index(models.Model):
+    title = models.CharField(max_length=255)
+
+class IndexImages(models.Model):
+    index_ids = models.ForeignKey(Index, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to='static/img')

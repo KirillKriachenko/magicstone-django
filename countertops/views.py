@@ -1,13 +1,16 @@
 from django.shortcuts import render
 from django.core.mail import send_mail
-from .models import Countertop
+from .models import Countertop,IndexImages
 
 # Create your views here.
 
 def show_main_page(request):
+    index_images = IndexImages.objects.filter(index_ids=1)
     view_template = 'countertops/index.html'
+    print(index_images)
+    context = {'images':index_images}
 
-    return render(request,view_template)
+    return render(request,view_template,context)
 
 def open_contact_form(request):
     view_template = 'countertops/contact.html'

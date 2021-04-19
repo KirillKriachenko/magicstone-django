@@ -39,7 +39,7 @@
                 </div>
             </li>
 
-            <li><a href="#">Sinks</a></li>
+            <li><a class="{% if filter == 'sinks' %}active-link{% endif %}" href="{% url 'sinks:get_all_sinks' %}">Sinks</a></li>
             <li class="small-width">
                 <div class="dropdown show">
                     <a class="btn" href="/countertops" role="button" id="dropdownMenuLink"
