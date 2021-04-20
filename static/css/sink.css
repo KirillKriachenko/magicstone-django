@@ -15,19 +15,99 @@
   margin-top: 10px;
   text-align: center;
 }
-.sink-container .sink {
+.sink-container .sink-card {
+  margin-top: 20px;
+  text-decoration: none;
   color: white;
 }
-.sink-container .sink .sink-category {
+.sink-container .sink-card .sink-category {
   font-size: 20px;
   text-align: center;
 }
-.sink-container .sink p {
+.sink-container .sink-card p {
   width: 100%;
   padding: 0px 20px 0px 20px;
 }
-.sink-container .sink img {
+.sink-container .sink-card img {
   width: 100%;
+}
+.sink-container .contact-us {
+  width: 90%;
+  margin-left: 5%;
+  color: #f4be35;
+}
+
+@media screen and (min-width: 650px) {
+  .sink-container .sink-title {
+    margin-top: 0;
+  }
+  .sink-container .sink-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .sink-container .sink-list .sink-card {
+    width: 350px;
+  }
+  .sink-container .sink-list .sink-card p {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .sink-container {
+    justify-content: center;
+    align-items: center;
+  }
+  .sink-container .sink-list {
+    max-width: 1000px;
+  }
+}
+.sink-container-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.sink-container-details .sink-title {
+  color: #f4be35;
+  font-size: 29px;
+  margin-top: 10px;
+  text-align: center;
+}
+.sink-container-details img {
+  width: 100%;
+  margin-top: 10px;
+}
+.sink-container-details .sink {
+  color: white;
+}
+.sink-container-details .sink-category {
+  padding: 0px 20px 0px 20px;
+}
+.sink-container-details p {
+  padding: 0px 20px 0px 20px;
+}
+.sink-container-details .contact-us {
+  width: 90%;
+  margin-left: 5%;
+  color: #f4be35;
+}
+
+@media screen and (min-width: 1000px) {
+  .sink-container-details {
+    justify-content: center;
+    align-items: center;
+  }
+  .sink-container-details .sink {
+    max-width: 1000px;
+  }
+  .sink-container-details .contact-us {
+    max-width: 1000px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 /*# sourceMappingURL=sink.css.map */

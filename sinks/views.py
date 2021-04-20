@@ -10,7 +10,10 @@ def get_all_sinks(request):
     return render(request,view_template,context)
 
 def get_sink_id(request,sink_id):
-    get_sink_id = Sink.objects.filter(id=sink_id)
+    get_sink_id = Sink.objects.get(id=sink_id)
+    print(sink_id)
+    print(get_sink_id)
+    print(get_sink_id.title)
     view_tempalte = 'sinks/sink.html'
     context = {'sink':get_sink_id,'filter':'sinks'}
 

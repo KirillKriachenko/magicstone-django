@@ -2,15 +2,41 @@
 {% load static %}
 
 {% block content %}
-    <div class="sink-container">
+    <div class="sink-container-details">
         <h1 class="sink-title"></h1>
+        <h1 class="sink-title">{{ sink.title }}</h1>
         <div class="sink">
             {% if sink.sink_image %}
                 <img src="{{ sink.sink_image.url }}">
             {% endif %}
-            <h3 class="sink-category">{{ sink.get_sink_category_display }}</h3>
-            <p class="sink-description">{{ sink.sink_text | safe | truncatewords:25 }}</p>
 
+            <h3 class="sink-category" style="margin-top: 20px">{{ sink.get_sink_category_display }}</h3>
+            <p class="sink-description">{{ sink.sink_text | safe }}</p>
+
+        </div>
+
+        <div class="contact-us">
+            <h3 class="text-left">Have questions?</h3>
+            <h5 class="text-left">Contact Us</h5>
+            <br/>
+            <form method="post">{% csrf_token %}
+                <div class="form-group">
+                    {#                <label for="exampleInputEmail1">Name</label>#}
+                    <input type="text" name="name" class="form-control" id="nameInput" placeholder="NAME">
+                    <input style="margin-top: 20px" name="email" type="email" class="form-control"
+                           id="emailInput"
+                           placeholder="EMAIL">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                            <textarea rows="8" class="form-control" name="message" id="messageInput"
+                                      placeholder="MESSAGE"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-warning">Submit</button>
+                <br/>
+            </form>
         </div>
 
     </div>

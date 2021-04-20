@@ -1,37 +1,140 @@
-.sink-container{
+.sink-container {
   display: flex;
   flex-direction: column;
   margin: 0;
   padding: 0;
   overflow: hidden;
 
-  a{
+  a {
     cursor: pointer;
     text-decoration: none;
   }
 
-  .sink-title{
+  .sink-title {
     color: #f4be35;
     font-size: 29px;
     margin-top: 10px;
     text-align: center;
   }
 
-  .sink{
+
+  .sink-card {
+    margin-top: 20px;
+    text-decoration: none;
     color: white;
-    .sink-category{
+
+
+    .sink-category {
       font-size: 20px;
       text-align: center;
     }
 
-   p{
-     width: 100%;
-     padding: 0px 20px 0px 20px;
-   }
+    p {
+      width: 100%;
+      padding: 0px 20px 0px 20px;
+    }
 
-    img{
+    img {
       width: 100%;
     }
   }
 
+  .contact-us {
+    width: 90%;
+    margin-left: 5%;
+    color: #f4be35;
+  }
+
+}
+
+@media screen and (min-width: 650px) {
+  .sink-container {
+    .sink-title {
+      margin-top: 0;
+    }
+
+    .sink-list {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+
+      .sink-card {
+        width: 350px;
+
+        p {
+          padding: 0;
+        }
+      }
+
+    }
+
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .sink-container {
+    justify-content: center;
+    align-items: center;
+
+    .sink-list {
+      max-width: 1000px;
+    }
+  }
+}
+
+.sink-container-details {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  .sink-title {
+    color: #f4be35;
+    font-size: 29px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .sink {
+    color: white;
+  }
+
+  .sink-category {
+    padding: 0px 20px 0px 20px;
+  }
+
+  p {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .contact-us {
+    width: 90%;
+    margin-left: 5%;
+    color: #f4be35;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .sink-container-details {
+    justify-content: center;
+    align-items: center;
+
+    .sink {
+      max-width: 1000px;
+    }
+
+    .contact-us{
+      max-width: 1000px;
+      margin: 0;
+      padding: 0;
+
+    }
+  }
 }

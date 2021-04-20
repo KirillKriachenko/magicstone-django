@@ -4,17 +4,20 @@
 {% block content %}
     <div class="sink-container">
         <h1 class="sink-title">Sink & Faucets</h1>
-        {% for sink in sink_list %}
-            <a href="{% url 'sinks:get_sink_id' sink.id %}">
-                <div class="sink">
-                    <h3 class="sink-category">{{ sink.get_sink_category_display }}</h3>
-                    <p class="sink-description">{{ sink.sink_text | safe | truncatewords:25 }}</p>
-                    {% if sink.sink_image %}
-                        <img src="{{ sink.sink_image.url }}">
-                    {% endif %}
-                </div>
-            </a>
-        {% endfor %}
+        <div class="sink-list">
+            {% for sink in sink_list %}
+                <a href="{% url 'sinks:get_sink_id' sink.id %}">
+                    <div class="sink-card">
+                        {% if sink.sink_image %}
+                            <img src="{{ sink.sink_image.url }}">
+                        {% endif %}
+                        <h3 style="margin-top: 20px;" class="sink-category">{{ sink.get_sink_category_display }}</h3>
+                        <p class="sink-description">{{ sink.sink_text | safe | truncatewords:25 }}</p>
+
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
     </div>
 
     {% include 'base/footer.html' %}
