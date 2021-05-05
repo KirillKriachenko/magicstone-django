@@ -20,10 +20,12 @@
           integrity="sha512-8WAX0xL/cHZ38RXoX2gtuqkAwmDVAzGwoFVmHvn46IDHGWOjTHx0vcl9OapNrfOzpFtql0SNkv+0y0b5Fm8ZkA=="
           crossorigin="anonymous"/>
 
+
 </head>
 <body>
 {% include 'base/basestyles.html' %}
 {% include 'base/header.html' %}
+{#<script src="/static/slabs/jquery-loupe-min.js"/>#}
 {#<hr/>#}
 
 
@@ -40,5 +42,17 @@
 {#JQuary-Confirm#}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+{#<script>#}
+{#    $('#test-img').loupe({#}
+{#        width: 200, // width of magnifier#}
+{#        height: 150, // height of magnifier#}
+{#        loupe: 'loupe' // css class for magnifier#}
+{#    });#}
+{#</script>#}
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="/static/slabs/jquery.loupe.js"></script>
+
+{#<script type="text/javascript">$('.demo').loupe();</script>#}
 </body>
 </html>
