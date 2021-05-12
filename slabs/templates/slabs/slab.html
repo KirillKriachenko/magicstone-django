@@ -3,7 +3,10 @@
 
 
 {% block content %}
-    <script src="/static/slabs/jquery.loupe.js"></script>
+{#    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>#}
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="{% static '/slabs/jquery.loupe.js' %}"></script>
+
     <div class="container">
         {% if message_name %}
             <div id="thankyou-div" style="color: white; text-align: center;">

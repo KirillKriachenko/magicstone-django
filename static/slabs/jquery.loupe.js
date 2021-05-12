@@ -60,7 +60,9 @@
 				.appendTo('body');
 
 			$this.data('loupe', true)
+				// .touchstart(move)
 				.mouseenter(move)
+				.tap(move)
 				.mouseout(function () {
 					time = setTimeout(hide, 10);
 				});
