@@ -3,9 +3,16 @@
 
 
 {% block content %}
-{#    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>#}
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="{% static '/slabs/jquery.loupe.js' %}"></script>
+    {#    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>#}
+    {#    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>#}
+
+    {#    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>#}
+    {#    <script src="http://code.jquery.com/mobile/1.5.0-rc1/jquery.mobile-1.5.0-rc1.min.js"></script>#}
+    {#    <script src="http://code.jquery.com/mobile/1.1.2/jquery.mobile-1.1.2.min.js"></script>#}
+    {#    <script src="{% static '/slabs/jquery.loupe.js' %}"></script>#}
+
+    {#    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">#}
+    <script src="{% static '/src/zoomsl.min.js' %}"></script>
 
     <div class="container">
         {% if message_name %}
@@ -31,6 +38,16 @@
             <div class="slab-main-page" style="text-align: center; overflow: hidden;">
                 <img id="slab-img" src="{{ slab.slab_image.url }}"
                      style="max-width: 800px; height: auto; text-align: center; align-items: center;">
+
+                {#                <div class="container mt-5 mb-5">#}
+                {#                    <div class="row">#}
+                {#                        <div class="col-md-6">#}
+                {#                            <img src="{{ slab.slab_image.url }}" id="myimage" style="width:570px">#}
+                {#                        </div>#}
+                {#                        <div class="col-md-6"></div>#}
+                {#                    </div>#}
+                {#                </div>#}
+
                 {#                <img id="test-img" src="{{ slab.slab_image.url }}"/>#}
                 {#                <div class="img-magnifier-container">#}
                 {#                    <img id="myimage" src="{{ slab.slab_image.url }}" width="600" height="400">#}
@@ -111,13 +128,27 @@
         {% endif %}
     </div>
 
+    {#    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>#}
+    {#    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>#}
+    {#    <script src="https://stackpath.bootstrapcdn.com/nootstrap/4.3.1/js/bootstrap.min.js"></script>#}
+
     <script>
-        $('#slab-img').loupe({
-            width: 200, // width of magnifier
-            height: 150, // height of magnifier
-            loupe: 'loupe' // css class for magnifier
-        });
+        $('#slab-img').imagezoomsl({
+            zoomrange: [1, 12],
+            zoomstart: 3,
+            innerzoommagnifier: true,
+            classmagnifier: 'glass',
+            magnifiersize: [150, 150]
+        })
     </script>
+
+    {#    <script>#}
+    {#        $('#slab-img').loupe({#}
+    {#            width: 200, // width of magnifier#}
+    {#            height: 150, // height of magnifier#}
+    {#            loupe: 'loupe' // css class for magnifier#}
+    {#        });#}
+    {#    </script>#}
     {% include 'base/footer.html' %}
     {##}
     {#    <script>#}
